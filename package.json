@@ -1,0 +1,8 @@
+{
+  "name": "turing-rdstream-motion-p03-security-hardened",
+  "version": "0.3.10",
+  "private": true,
+  "scripts": {
+    "test": "node tests/ui-worker.cjs"
+  }
+}

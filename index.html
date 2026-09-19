@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Turing RDStream Motion</title>
+  <link rel="stylesheet" href="style.css?v=0.3.10">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">TURING RDSTREAM · 0.3.10</div>
+    <h1>Turing RDStream Motion</h1>
+  </header>
+
+  <section class="card">
+    <h2>文章 → 5秒の模様</h2>
+    <label for="plain">メッセージ <span id="byteCount">0 UTF-8 bytes</span></label>
+    <textarea id="plain" rows="10" placeholder="文章を入力してください。"></textarea>
+
+    <label for="sourceFile">またはファイル（最大128 KiB・文章より優先）</label>
+    <input id="sourceFile" type="file">
+
+    <label for="sheetSpan">保存形式</label>
+    <select id="sheetSpan">
+      <option value="128">標準</option>
+      <option value="8">小分け</option>
+    </select>
+
+    <label for="key">合い言葉</label>
+    <input id="key" type="password" autocomplete="off">
+
+    <button id="generate" class="primary" disabled>5秒の模様を生成</button>
+    <div id="genStatus" class="status">起動確認中</div>
+
+    <div class="actionGrid">
+      <button id="saveMotion" disabled>選択APNGを保存</button>
+      <button id="saveZip" disabled>全APNGをZIPで保存</button>
+    </div>
+
+    <div id="preview" hidden>
+      <h3>5秒プレビュー</h3>
+      <select id="sheetSelect"></select>
+      <canvas id="motionCanvas" width="512" height="512" aria-label="生成されたTuring pattern animation"></canvas>
+      <button id="replayMotion" type="button" disabled>もう一度再生</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>5秒の模様 → 文章</h2>
+    <label for="motionFile">APNG一式、またはZIP</label>
+    <input id="motionFile" type="file" accept="image/apng,image/png,.apng,.png,.zip" multiple>
+
+    <label for="decodeKey">合い言葉</label>
+    <input id="decodeKey" type="password" autocomplete="off">
+
+    <button id="decode" disabled>復号</button>
+    <div id="decodeStatus" class="status">APNGを選択してください</div>
+    <textarea id="result" rows="10" readonly></textarea>
+    <button id="saveResult" disabled>復号データを保存</button>
+  </section>
+
+  <button id="cancel" hidden>処理を中止</button>
+</main>
+<script src="boot.js?v=0.3.10"></script>
+</body>
+</html>

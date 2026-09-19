@@ -1,0 +1,237 @@
+:root {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  background: #f7f7f4;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.wrap {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 28px 16px 56px;
+}
+header {
+  margin: 12px 0 24px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: #6d6d68;
+}
+h1 {
+  font-size: 32px;
+  margin: 8px 0 10px;
+  letter-spacing: -0.03em;
+}
+h2 {
+  font-size: 17px;
+  margin: 0 0 16px;
+}
+p {
+  line-height: 1.65;
+  color: #444;
+}
+.card {
+  background: #fff;
+  border: 1px solid #deded8;
+  border-radius: 16px;
+  padding: 18px;
+  margin: 14px 0;
+}
+.patternCard {
+  background: #111;
+  border-radius: 16px;
+  padding: 14px;
+  margin: 14px 0;
+  text-align: center;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  width: min(100%, 384px);
+  height: auto;
+  image-rendering: auto;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+}
+.caption {
+  color: #aaa;
+  font-size: 11px;
+  margin-top: 10px;
+}
+label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  margin: 12px 0 7px;
+}
+textarea,
+input {
+  width: 100%;
+  border: 1px solid #cfcfc8;
+  border-radius: 10px;
+  padding: 12px;
+  font: inherit;
+  background: #fff;
+  color: #111;
+}
+textarea {
+  resize: vertical;
+}
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+button {
+  border: 1px solid #bcbcb5;
+  background: #fff;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-weight: 650;
+  cursor: pointer;
+}
+button.primary {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.status {
+  margin-top: 12px;
+  font:
+    12px ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  color: #666;
+  white-space: pre-wrap;
+}
+.small {
+  font-size: 13px;
+  color: #666;
+}
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 12px;
+  line-height: 1.55;
+  background: #f5f5f2;
+  padding: 12px;
+  border-radius: 10px;
+}
+summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+@media (max-width: 520px) {
+  h1 {
+    font-size: 28px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  button {
+    width: 100%;
+  }
+}
+#sheets canvas {
+  display: block;
+  width: min(100%, 384px);
+  height: auto;
+  margin: 12px 0;
+}
+#sheets > div {
+  margin: 24px 0;
+}
+button {
+  min-height: 44px;
+}
+input[type="file"] {
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+textarea,
+input {
+  box-sizing: border-box;
+}
+summary {
+  cursor: pointer;
+}
+#sheetImage {
+  display: block;
+  width: min(100%, 384px);
+  height: auto;
+  margin: 12px 0;
+}
+select {
+  font: inherit;
+  padding: 10px;
+  max-width: 100%;
+}
+#preview[hidden] {
+  display: none;
+}
+#cancel {
+  position: sticky;
+  bottom: 12px;
+  border: 1px solid #777;
+  background: #fff;
+  z-index: 2;
+}
+button[hidden] {
+  display: none;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+input[type="file"] {
+  font-size: 14px;
+  width: 100%;
+}
+#motionCanvas {
+  display: block;
+  width: min(100%, 512px);
+  height: auto;
+  margin: 14px auto 0;
+  background: #000;
+  border-radius: 10px;
+}
+#preview h3 { margin: 18px 0 6px; font-size: 14px; }
+
+#generate, #decode { margin-top: 16px; }
+
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.actionGrid > button {
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 680px) {
+  .actionGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+#saveResult {
+  margin-top: 18px;
+}
