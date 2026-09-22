@@ -18,6 +18,7 @@ Instead of placing data in metadata, alpha channels, LSBs, QR-like cells, or a s
 - Gray–Scott state evolves from one information state to the next
 - Larger inputs are split across multiple APNG files
 - ZIP export for multi-image sets
+- Installable PWA with offline app-shell support
 
 ## Concept
 
